@@ -1,6 +1,6 @@
 # Grupo x
 
-Este es el repositorio del *Grupo X*, cuyos integrantes son:
+Este es el repositorio del *Grupo 20*, cuyos integrantes son:
 
 * Veronica Torres - 202373503-5
 * Isidora Villegas - 202203026-7
