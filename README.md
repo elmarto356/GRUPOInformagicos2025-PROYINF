@@ -10,7 +10,12 @@ Este es el repositorio del *Grupo 20*, cuyos integrantes son:
 
 ## Wiki
 
-[Enlace de Acceso a Wiki](https://github.com/elmarto356/GRUPOInformagicos2025-PROYINF/wiki)
+* [Enlace de Acceso a Wiki](https://github.com/elmarto356/GRUPOInformagicos2025-PROYINF/wiki)
+
+## Paso a Paso para levantar el proyecto
+
+* [Backend](https://github.com/elmarto356/GRUPOInformagicos2025-PROYINF/blob/main/MontarBackend.md) (Django)
+* [FrontEnd]() **TERMINAR!!!!**
 
 ## Videos
 
