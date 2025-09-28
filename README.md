@@ -10,14 +10,10 @@ Este es el repositorio del *Grupo 20*, cuyos integrantes son:
 
 ## Wiki
 
-https://github.com/elmarto356/GRUPOInformagicos2025-PROYINF/wiki
+[Enlace de Acceso a Wiki](https://github.com/elmarto356/GRUPOInformagicos2025-PROYINF/wiki)
 
 ## Videos
 
-> Reemplazar con los enlaces correspondientes
-
-* [Video presentación cliente] (https://aula.usm.cl/mod/resource/view.php?id=6926137)
+[Video presentación cliente](https://aula.usm.cl/mod/resource/view.php?id=6926137)
 
 ## Aspectos técnicos relevantes
-
-
