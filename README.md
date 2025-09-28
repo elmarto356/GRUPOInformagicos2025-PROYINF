@@ -1,4 +1,4 @@
-# Grupo x
+# Grupo 20
 
 Este es el repositorio del *Grupo 20*, cuyos integrantes son:
 
