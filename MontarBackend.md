@@ -1,200 +1,97 @@
 
 
 ## 📋 **Prerrequisitos**
-- Tener WSL2 instalado y configurado
+- Tener **WSL2** instalado y configurado
 - Ubuntu/Debian en WSL2
+- **Docker Desktop** instalado con **WSL integration** activada para distro
+- (Opcional) _curl_ o _psql_ para probar desde terminal
 
 ---
 
 ## 🚀 **Pasos de Configuración**
 
-### **1. Actualizar el sistema**
+### **1. Clonar el proyecto**
 ```bash
-sudo apt update && sudo apt upgrade -y
+
+git clone https://github.com/elmarto356/GRUPOInformagicos2025-PROYINF/tree/main
+cd GRUPOInformagicos2025-PROYINF
+
 ```
 
-### **2. Instalar dependencias básicas**
+### **2. Levantar servicios**
 ```bash
-sudo apt install -y python3 python3-pip python3-venv git
+docker compose up -d --build
 ```
 
-### **3. Instalar PostgreSQL**
+### **3. Verificar funcionamiento óptimo**
 ```bash
-
-sudo apt install -y postgresql postgresql-contrib
-
-# iniciar el servicio
-sudo service postgresql start
-
-# configurar para inicio automático (opcional)
-echo 'sudo service postgresql start' >> ~/.bashrc
-```
-
-### **4. Configurar PostgreSQL**
-```bash
-# conectar como usuario postgres
-sudo -u postgres psql
-
-# ejecutar los siguientes comandos dentro de PostgreSQL:
-ALTER USER postgres PASSWORD 'postgres123';
-CREATE DATABASE simulador_creditos;
-GRANT ALL PRIVILEGES ON DATABASE simulador_creditos TO postgres;
-\q
-```
-
-### **5. Clonar el proyecto**
-```bash
-
-git clone https://github.com/elmarto356/GRUPOInformagicos2025-PROYINF
-cd simulador_credito
-```
-
-### **6. Configurar entorno virtual de Python**
-```bash
-# crear entorno virtual
-python3 -m venv venv
-
-# activar entorno virtual
-source venv/bin/activate
-
-# actualizar pip
-pip install --upgrade pip
-
-# instalar dependencias del proyecto
-pip install -r requirements.txt
-```
-
-### **7. Configurar Django**
-```bash
-# verificar que el archivo settings.py tenga la configuración correcta (aunque ya deberia estar en el clone)
-
-# aplicar migraciones
-python manage.py migrate
-
-# crear superusuario para acceder al admin
-python manage.py createsuperuser
-```
-
-### **8. Probar que todo funciona**
-```bash
-# ejecutar servidor de desarrollo
-python manage.py runserver
-
-# En el navegador, visitar:
-# http://127.0.0.1:8000 - Página principal
-# http://127.0.0.1:8000/admin - Panel de administración
+docker compose ps
 ```
 
 ---
 
-## ⚙️ **Configuración de settings.py**
-**NOTA:** este archivo ya debe estar configurado en el repositorio, pero aquí está la configuración para referencia:
+## 🌐 **Servicios disponibles**
 
-```python
-# simulador_creditos/settings.py
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'simulador_creditos',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres123',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-```
-
----
-
-## 🔧 **Comandos útiles para el día a día**
-
-### **Activar entorno virtual (siempre primero)**
-```bash
-source venv/bin/activate
-```
-
-### **Gestión de la base de datos**
-```bash
-# crear migraciones después de cambiar models.py
-python manage.py makemigrations
-
-# aplicar migraciones
-python manage.py migrate
-
-# acceder al shell de Django
-python manage.py shell
-
-# conectar directamente a PostgreSQL
-sudo -u postgres psql simulador_creditos
-```
-
-### **Servidor de desarrollo**
-```bash
-# ejecutar servidor
-python manage.py runserver
-
-# ejecutar en puerto específico (por si acaso)
-python manage.py runserver 8080
-```
-
-### **Gestión de PostgreSQL**
-```bash
-# verificar estado del servicio
-sudo service postgresql status
-
-# iniciar servicio (si no está corriendo)
-sudo service postgresql start
-
-# reiniciar servicio
-sudo service postgresql restart
-```
+- Frontend (React CRA) → http://localhost:3000
+- API (Node/Express) → http://localhost:8080
+- PostgreSQL → localhost:5432
+    * Usuario: user
+    * Contraseña: password
+    * Base: mydb
+- pgAdmin → http://localhost:5050
+    * Email: admin@admin.com
+    * Password: admin
+  
+    **Configuración**:
+  
+      1. Luego de inicia sesión se debe crear un nuevo servidor, para ello ir a 'Add New Server'
+      2. General -> Name: postgres
+      3. Connection Host name/adress: postgres_db, Port: 5432, Maintenance database: mydb, Username: user, Password: password
+      4. Save
 
 ---
 
-## **Solución de Problemas Comunes**
+## 🧪 **Endpoints de prueba**
 
-### **Error: "permission denied for schema public"**
+API Hello
 ```bash
-sudo -u postgres psql
-ALTER SCHEMA public OWNER TO postgres;
-\q
+curl http://localhost:8080/api/hello
 ```
-
-### **Error: "no password supplied"**
-Verifica que `settings.py` tenga la contraseña correcta: `'PASSWORD': 'postgres123'`
-
-### **Error: "database does not exist"**
+Respuesta:
 ```bash
-sudo -u postgres psql
-CREATE DATABASE simulador_creditos;
-\q
+{ "ok": true, "msg": "Hola desde API" }
 ```
-
-### **PostgreSQL no se conecta**
+Conexión a DB:
 ```bash
-# Verificar que el servicio esté corriendo
-sudo service postgresql status
-
-# Si no está corriendo, iniciarlo
-sudo service postgresql start
+curl http://localhost:8080/api/health/db
 ```
-
+Respuesta:
+```bash
+{ "status": "ok", "time": "..." }
+```
 ---
 
-## 📁 **Estructura esperada del proyecto**
-```
-simulador_credito/
-├── venv/                    # Entorno virtual (no está en git)
-├── simulador_creditos/      # Configuración del proyecto
-│   ├── __init__.py
-│   ├── settings.py         # Configuración de BD ya incluida
-│   ├── urls.py
-│   └── wsgi.py
-├── creditos/               # App principal
-├── manage.py
-├── requirements.txt        # Dependencias del proyecto
-└── README.md
-```
+## 🔧 **Comandos útiles**
 
----
-
+Logs:
+```bash
+docker compose logs -f api
+docker compose logs -f web
+docker compose logs -f postgres_db
+```
+Reiniciar solo un servicio:
+```bash
+docker compose build api && docker compose up -d api
+```
+Entrar a un contenedor:
+```bash
+docker compose exec api sh
+```
+Apagar todo:
+```bash
+docker compose down
+```
+Resetear DB:
+```bash
+docker compose down -v
+```
