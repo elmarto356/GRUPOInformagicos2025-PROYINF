@@ -14,8 +14,8 @@ Este es el repositorio del *Grupo 20*, cuyos integrantes son:
 
 ## Paso a Paso para levantar el proyecto
 
-* [Backend](https://github.com/elmarto356/GRUPOInformagicos2025-PROYINF/blob/main/MontarBackend.md) (Django)
-* [FrontEnd]() **TERMINAR!!!!**
+* [Backend](https://github.com/elmarto356/GRUPOInformagicos2025-PROYINF/blob/main/MontarBackend.md)
+* [FrontEnd](https://github.com/elmarto356/GRUPOInformagicos2025-PROYINF/blob/secundario/MontarFrontend.md)
 
 ## Videos
 
