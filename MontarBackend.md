@@ -23,7 +23,12 @@ cd GRUPOInformagicos2025-PROYINF
 docker compose up -d --build
 ```
 
-### **3. Verificar funcionamiento óptimo**
+### **3. Crear Tablas de la Base de Datos**
+```bash
+docker-compose exec api npm run migrate
+```
+
+### **4. Verificar funcionamiento óptimo**
 ```bash
 docker compose ps
 ```
