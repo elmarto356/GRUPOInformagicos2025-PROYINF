@@ -9,7 +9,6 @@ services:
     environment:
       - REACT_APP_API_URL=http://localhost:8080
     volumes:
-      # Hot-reload del front
       - ./:/app
       - /app/node_modules
     depends_on:
