@@ -5,7 +5,8 @@
   "type": "commonjs",
   "scripts": {
     "start": "node index.js",
-    "dev": "node index.js"
+    "dev": "node index.js",
+    "migrate": "node scripts/migrate.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

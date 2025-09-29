@@ -22,6 +22,8 @@ app.get('/api/health/db', async (_req, res) => {
   }
 });
 
+app.use('/api', usersRouter);
+
 const PORT = process.env.API_PORT || 8080;
 app.listen(PORT, () => console.log(`API escuchando en :${PORT}`));
 
