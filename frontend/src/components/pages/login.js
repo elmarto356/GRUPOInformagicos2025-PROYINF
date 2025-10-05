@@ -33,7 +33,7 @@ function App() {
         </form>
 
         <p className="text-center mt-3">
-          ¿No tienes cuenta? <a href="/register">Regístrate</a>
+          ¿No tienes cuenta? <a href="/registro">Regístrate</a>
         </p>
       </div>
     </div>
