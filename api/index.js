@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const { ping, pool } = require('./db');
+const usersRouter = require('./routes/users');
+const authRouter = require('./routes/auth');
 
 const app = express();
 app.use(cors());
@@ -22,7 +24,9 @@ app.get('/api/health/db', async (_req, res) => {
   }
 });
 
+// Rutas
 app.use('/api', usersRouter);
+app.use('/api', authRouter);
 
 const PORT = process.env.API_PORT || 8080;
 app.listen(PORT, () => console.log(`API escuchando en :${PORT}`));
