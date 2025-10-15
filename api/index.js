@@ -2,12 +2,20 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 const { ping, pool } = require('./db');
+const usersRouter = require('./routes/users');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Ping general
+app.get('/', (_req, res) => {
+  res.json({
+    ok: true,
+    msg: 'API viva',
+    endpoints: ['/api/hello', '/api/users']
+  });
+});
+
 app.get('/api/hello', (_req, res) => {
   res.json({ ok: true, msg: 'Hola desde API' });
 });
