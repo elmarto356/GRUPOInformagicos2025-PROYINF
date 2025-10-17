@@ -1,9 +1,9 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Login from "./components/pages/login.js";
-import Register from "./components/pages/register.js";
+import Login from "./components/pages/Login.js";
+import Register from "./components/pages/Register.js";
 import Navbar from "./components/things/navbar.js" 
-import Simulador from "./components/pages/simulador";
+import Simulador from "./components/pages/Simulador";
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 
 
