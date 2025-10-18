@@ -21,3 +21,16 @@ Este es el repositorio del *Grupo 20*, cuyos integrantes son:
 [Video presentación cliente](https://aula.usm.cl/mod/resource/view.php?id=6926137)
 
 ## Aspectos técnicos relevantes
+
+* Al momento de levantar el proyecto mediante docker existe la posibilidad del error:
+  ```batch
+  failed to solve: error getting credentials - err: exit status 1, out:
+  ```
+  Su solución será:
+  ```batch
+  #Desde WSL
+  docker logout
+  docker pull node:20-alpine
+  docker compose build --no-cache api
+  docker compose up -d api
+  ```
