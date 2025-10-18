@@ -3,7 +3,7 @@
 ## 📋 **Prerrequisitos**
 - Tener **WSL2** instalado y configurado
 - Ubuntu/Debian en WSL2
-- **Docker Desktop** instalado con **WSL integration** activada para distro
+- **Docker Desktop** instalado con **WSL integration** activada para distro. Importante **abrir antes del paso 2**
 - (Opcional) _curl_ o _psql_ para probar desde terminal
 
 ---
@@ -23,12 +23,7 @@ cd GRUPOInformagicos2025-PROYINF
 docker compose up -d --build
 ```
 
-### **3. Crear Tablas de la Base de Datos**
-```bash
-docker-compose exec api npm run migrate
-```
-
-### **4. Verificar funcionamiento óptimo**
+### **5. Verificar funcionamiento óptimo**
 ```bash
 docker compose ps
 ```
