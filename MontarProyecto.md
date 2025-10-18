@@ -93,5 +93,14 @@ docker compose down
 ```
 Resetear DB:
 ```bash
-docker compose down -v
+docker compose down -v #considerar que al realizar esto se resetea a la vez TODA la base de datos
+```
+Actualizar cambios en la base de datos:
+```bash
+docker compose build --no-cache api
+docker compose up -d api
+```
+Verificar tablas presentes en la base de datos:
+```bash
+docker compose exec postgres_db psql -U user -d mydb -c "SELECT name, applied_at FROM schema_migrations ORDER BY applied_at;"
 ```
