@@ -1,5 +1,3 @@
-
-
 ## 📋 **Prerrequisitos**
 - Tener **WSL2** instalado y configurado
 - Ubuntu/Debian en WSL2
