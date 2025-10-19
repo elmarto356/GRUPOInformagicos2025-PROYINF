@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const API_BASE = process.env.REACT_APP_API_URL || "http://localhost:8080";
+
 function Simulador() {
   const [monto, setMonto] = useState("");
   const [cuotas, setCuotas] = useState(""); // en meses
@@ -30,7 +32,6 @@ function Simulador() {
       if (!Number.isFinite(months) || months < 6 || months > 60)
         throw new Error("El número de cuotas debe estar entre 6 y 60.");
 
-      // CRA con proxy redirige /api/... a la API en :8080
       const res = await fetch("/api/simulations", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

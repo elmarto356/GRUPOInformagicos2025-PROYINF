@@ -6,8 +6,6 @@ services:
       dockerfile: Dockerfile.web
     ports:
       - "3000:3000"
-    environment:
-      - REACT_APP_API_URL=http://localhost:8080
     volumes:
       - ./frontend:/app
       - /app/node_modules
@@ -18,13 +16,8 @@ services:
     build:
       context: ./api
       dockerfile: Dockerfile
-    environment:
-      - API_PORT=8080
-      - DB_HOST=postgres_db
-      - DB_PORT=5432
-      - DB_USER=user
-      - DB_PASSWORD=password
-      - DB_NAME=mydb
+    env_file:
+      - ./api/.env.production
     ports:
       - "8080:8080"
     depends_on:
