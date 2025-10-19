@@ -13,7 +13,6 @@ services:
       - /app/node_modules
     depends_on:
       - api
-    restart: unless-stopped
 
   api:
     build:
@@ -34,7 +33,6 @@ services:
     volumes:
       - ./api:/app
       - /app/node_modules
-    restart: unless-stopped
 
   postgres_db:
     image: postgres:15-alpine
@@ -46,7 +44,6 @@ services:
       - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
-    restart: unless-stopped
 
   pgadmin:
     image: dpage/pgadmin4:latest
@@ -60,7 +57,6 @@ services:
       - postgres_db
     volumes:
       - pgadmin_data:/var/lib/pgadmin
-    restart: unless-stopped
 
 volumes:
   postgres_data:
