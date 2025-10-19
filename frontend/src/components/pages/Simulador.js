@@ -68,10 +68,44 @@ function Simulador() {
   const canSubmit = Boolean(monto && cuotas);
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100 bs-body-bg">
-      <div className="card p-4 shadow" style={{ width: "500px" }}>
-        <h3 className="text-center mb-4">Simulación de crédito</h3>
+    //fondo
+    <div className="d-flex justify-content-center align-items-center vh-100 bs-body-bg"
+      style={{backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundColor: "#d9dfe7ff",
+            }}>
 
+      <div className="d-flex align-items-center p-4"   //imagen fondo
+        style={{ 
+          backgroundImage: "url('/images/fondoprueba.png')",  //agregar imagen motivante
+          transform: "translateX(700px)",
+          background: "#a4c9f9ff", 
+          borderRadius: "12px", 
+          boxShadow: "0 6px 20px rgba(0,0,0,0.1)", 
+          width: "45%", 
+          height:"100%"
+      }}
+    ></div>
+
+      <div className="card p-5 shadow"    //formulario credito
+        style={{
+          width: "550px",
+          transform: "translateX(-900px)",
+          borderRadius: "12px",
+          boxShadow: "0 10px 20px rgba(0,0,0,0.1)"
+      }}>
+
+        <h3 className="text-center mb-4" 
+          style={{color:'rgba(42, 54, 159, 1)'}}
+          >
+          Crédito de Consumo Digital
+          </h3>
+
+        <h5 className="text-center mb-2" 
+        style={{ fontWeight: "normal" }}
+        >
+        Solicítalo 100% online y recibe respuesta en minutos
+        </h5>
         <form onSubmit={handleSubmit}>
           {/* Monto */}
           <div className="mb-3">

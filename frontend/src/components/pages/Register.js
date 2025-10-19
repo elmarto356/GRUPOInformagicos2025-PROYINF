@@ -62,8 +62,10 @@ function Register() {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center vh-100 bs-body-bg">
+    <div className="d-flex justify-content-center align-items-center vh-100 bs-body-bg"
+    >
       <div className="card p-4 shadow" style={{ width: 400 }}>
+
         <h3 className="text-center mb-4">Regístrate</h3>
 
         {msg && <div className="alert alert-info py-2">{msg}</div>}

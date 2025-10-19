@@ -10,9 +10,11 @@ import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 
 function App() {
     return (
+    
         <Router>
             <Navbar />
             <Routes>
+                <Route path="/" element={<Simulador />} /> 
                 <Route path="/registro" element={<Register />} />
                 <Route path="/inicio-sesion" element={<Login />} />
                 <Route path="/simulador-credito" element={<Simulador />} />
