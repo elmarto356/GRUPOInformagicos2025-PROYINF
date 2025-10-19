@@ -5,6 +5,7 @@ import Register from "./components/pages/Register.js";
 import Navbar from "./components/things/navbar.js" 
 import Simulador from "./components/pages/Simulador";
 import ResultadoSimulacion from "./components/pages/ResultadoSimulacion";
+import LoginExitoso from "./components/pages/LoginExitoso.js";
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 
 
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/inicio-sesion" element={<Login />} />
                 <Route path="/simulador-credito" element={<Simulador />} />
                 <Route path="/resultado-simulacion" element={<ResultadoSimulacion />} />
+                <Route path="/login-exitoso" element={<LoginExitoso />} />
             </Routes>
         </Router>
     );
