@@ -23,6 +23,7 @@ Este es el repositorio del *Grupo 20*, cuyos integrantes son:
 ## Aspectos técnicos relevantes
 
 * Al momento de levantar el proyecto mediante docker existe la posibilidad del error:
+
   ```batch
   failed to solve: error getting credentials - err: exit status 1, out:
   ```
