@@ -20,6 +20,8 @@ Este es el repositorio del *Grupo 20*, cuyos integrantes son:
 
 [Video presentación cliente](https://aula.usm.cl/mod/resource/view.php?id=6926137)
 
+[Video Hito 3](https://usmcl-my.sharepoint.com/:v:/g/personal/isidora_villegas_usm_cl/EYNoOKT1bmdCi90GGsvc2ggBmbov4gz3Gt78CxImAnJdxw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=bgKf31)
+
 ## Aspectos técnicos relevantes
 
 * Al momento de levantar el proyecto mediante docker existe la posibilidad del error:
