@@ -6,6 +6,7 @@ import Navbar from "./components/things/navbar.js"
 import Simulador from "./components/pages/Simulador";
 import ResultadoSimulacion from "./components/pages/ResultadoSimulacion";
 import HistorialSimulaciones from "./components/pages/HistorialSimulaciones";
+import PreHistorialSimulaciones from "./components/pages/PreHistorialSimulaciones";
 import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 
 
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/simulador-credito" element={<Simulador />} />
                 <Route path="/resultado-simulacion" element={<ResultadoSimulacion />} />
                 <Route path="/historial-simulaciones" element={<HistorialSimulaciones />} />
+                <Route path="/prehistorial-simulaciones" element={<PreHistorialSimulaciones />} />
             </Routes>
         </Router>
     );

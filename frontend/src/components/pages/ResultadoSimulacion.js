@@ -102,7 +102,7 @@ export default function ResultadoSimulacion() {
         <div className="d-flex gap-2 mt-3">
           <Link className="btn btn-secondary w-50" to="/simulador-credito">Nueva simulación</Link>
           <Link className="btn btn-primary w-50" to="/">Inicio</Link>
-          <Link className="btn btn-primary w-50" to="/historial-simulaciones">Historial de simulaciones</Link>
+          <Link className="btn btn-primary w-50" to="/prehistorial-simulaciones">Guardar Simulación</Link>
         </div>
       </div>
     </div>
