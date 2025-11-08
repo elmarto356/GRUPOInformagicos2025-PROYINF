@@ -30,17 +30,9 @@ router.post('/simulations', (req, res) => {
     input: { amount, months },
     ...sim,
     notes: [
-      'Simulación con tasa estándar fija 16.5% anual.',
-      'Fórmula: amortización francesa (cuotas fijas).'
+      'Simulación con tasa estándar fija 16.5% anual.'
     ]
   });
-});
-
-router.get('/simulate', (req, res) => {
-  const amount = Number(req.query.amount ?? 1000000);
-  const months = Number(req.query.months ?? 24);
-  const sim = simulateStandard({ amount, months });
-  res.json({ ok: true, input: { amount, months }, ...sim });
 });
 
 module.exports = router;
