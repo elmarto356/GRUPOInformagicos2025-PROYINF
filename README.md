@@ -22,7 +22,7 @@ Este es el repositorio del *Grupo 20*, cuyos integrantes son:
 
 [Video Hito 3](https://usmcl-my.sharepoint.com/:v:/g/personal/isidora_villegas_usm_cl/EbvgNC8a7I1LtXgYCOIhxDkB8JS94hMduDAD5lj5mMeKfg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=1bIGph)
 
-[Video Hito 5]([https://usmcl-my.sharepoint.com/:v:/g/personal/isidora_villegas_usm_cl/EbvgNC8a7I1LtXgYCOIhxDkB8JS94hMduDAD5lj5mMeKfg?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=1bIGph](https://usmcl-my.sharepoint.com/:v:/g/personal/isidora_villegas_usm_cl/IQBqZnrbfYAUQo1j6bNq6zmGAWwDVsrJcOlfBTNOE_uc8qs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=03WFob))
+[Video Hito 5](https://usmcl-my.sharepoint.com/:v:/g/personal/isidora_villegas_usm_cl/IQBqZnrbfYAUQo1j6bNq6zmGAWwDVsrJcOlfBTNOE_uc8qs?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=03WFob)
 ## Aspectos técnicos relevantes
 
 * Al momento de levantar el proyecto mediante docker existe la posibilidad del error:
