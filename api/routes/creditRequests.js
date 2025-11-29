@@ -1,12 +1,14 @@
-        // Simular creación de solicitud de crédito
-        // crear tabla credit_requests en la base de datos
-        // proceso de OCR con workers?
+const express = require('express');
+const router = express.Router();
+const CreditRequestController = require('../controladores/creditRequestController');
 
-        res.status(201).json({
-            ok: true,
-            message: 'Solicitud creada exitosamente'
-        });
-    } catch (error) {
-        return res.status(500).json({ ok: false, error: error.message });
-    }
-});
+// POST: Crear una nueva solicitud de crédito
+router.post('/credit-requests', CreditRequestController.createRequest);
+
+// GET: Obtener todas las solicitudes de un usuario
+router.get('/credit-requests/user/:userId', CreditRequestController.getUserRequests);
+
+// GET: Obtener una solicitud específica por ID
+router.get('/credit-requests/:id', CreditRequestController.getRequestById);
+
+module.exports = router;

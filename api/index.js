@@ -5,7 +5,8 @@ const { ping, pool } = require('./db');
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 const OCRRouter = require('./routes/OCR');
-const simulacionRouter = require('./routes/simulacionRouter'); 
+const simulacionRouter = require('./routes/simulacionRouter');
+const creditRequestsRouter = require('./routes/creditRequests'); 
 
 const app = express();
 app.use(cors());
@@ -21,7 +22,8 @@ app.get('/', (_req, res) => {
       '/api/users',
       '/api/auth',
       '/api/OCR',
-      '/api/simulations'
+      '/api/simulations',
+      '/api/credit-requests'
     ]
   });
 });
@@ -46,6 +48,7 @@ app.use('/api', usersRouter);
 app.use('/api', authRouter);
 app.use('/api', OCRRouter);
 app.use('/api', simulacionRouter);
+app.use('/api', creditRequestsRouter);
 
 const PORT = process.env.API_PORT || 8080;
 app.listen(PORT, () => console.log(`API escuchando en :${PORT}`));
