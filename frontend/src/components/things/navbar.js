@@ -1,8 +1,13 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
 
-function Navbar(){
+function Navbar({isLoggedIn, onLogout}) {
+    const navigate = useNavigate();
+    const handleLogoutClick = () => {
+        onLogout();               // cambia isLoggedIn a false
+        navigate("/inicio-sesion");
+    };
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
@@ -25,9 +30,25 @@ function Navbar(){
                             <Link to="/Nosotros" className="nav-link">Nosotros</Link>
                         </li>
                     </ul>
-                    <span className="navbar-text">
-                    nombre proyecto
-                    </span>
+                    <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                        {isLoggedIn && (
+                            <>
+                                <li className="nav-item">
+                                <Link to="/pagina-menu" className="nav-link">
+                                    Mi menú
+                                </Link>
+                                </li>
+                                <li className="nav-item">
+                                <button
+                                    className="btn btn-outline-danger ms-2"
+                                    onClick={handleLogoutClick}
+                                >
+                                    Cerrar sesión
+                                </button>
+                                </li>
+                            </>
+                        )}
+                    </ul>
                 </div>
             </div>
         </nav>

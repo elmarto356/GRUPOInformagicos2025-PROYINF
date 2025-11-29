@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from "react-router-dom";
 
-function Login() {
+function Login({onLoginSuccess}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
@@ -22,8 +22,9 @@ function Login() {
       const data = await response.json();
 
       if (response.ok) {
+        onLoginSuccess(); 
         alert("Inicio de sesión exitoso");
-        navigate("/historial-simulaciones");
+        navigate("/pagina-menu");
       } else {
         alert(data.message || "Error al iniciar sesión");
       }
